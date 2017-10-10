@@ -1,9 +1,13 @@
+# graphs import
 import matplotlib.pyplot as plt
 
+# _chat.txt is the exported file from whatsapp, and should be in the same directory as this file.
 chatfile = open("_chat.txt", "r")
 
+# makes a list, and assigns each line from the original file as an item
 messages = [line for line in chatfile]
 
+# function to figure out the cumulative messages per hour of the day.
 def cumulativeHours():
     cumuHour = {hour : 0 for hour in range(24)}
     cumuCait = {hour : 0 for hour in range(24)}

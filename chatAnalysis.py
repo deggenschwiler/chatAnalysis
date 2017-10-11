@@ -10,9 +10,6 @@ messages = [line for line in chatfile]
 # function to figure out the cumulative messages per hour of the day.
 def cumulativeHours():
     cumuHour = {hour : 0 for hour in range(24)}
-#    cumuCait = {hour : 0 for hour in range(24)}
-#    cumuDarren = {hour : 0 for hour in range(24)}
-
     hours = [item[12:14] for item in messages]
     people = [item[22:26] for item in messages]
 
@@ -20,10 +17,6 @@ def cumulativeHours():
         if (msg.isdigit()):
             hour = int(msg)
             if (hour >= 0 and hour <= 23):
-#                cumuCait[hour] += 1
-#                elif(people[hour] == "Darr" ):
-#                cumuDarren[hour] += 1
-#                else:
                     cumuHour[hour] += 1
     print(cumuHour)
 

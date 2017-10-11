@@ -41,5 +41,6 @@ def howmuchdowemessage(messagestotest):
             cumuPerson[individual] += 1
     print(cumuPerson)
 
+#call the functions
 howmuchdowemessage(messages)
 cumulativeHours()
